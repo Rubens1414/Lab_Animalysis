@@ -68,7 +68,7 @@ function Menu_Graficas() {
             <h1 style={{ fontFamily: 'Bowling' }} className='text-3xl'> Condición </h1>
         </button>
         <button className='contenedor_Grafica1'  onClick={handleEdadClick}>
-            <h1 style={{ fontFamily: 'Bowling' }} className='text-3xl'> Edad </h1>
+            <h1 style={{ fontFamily: 'Bowling' }} className='text-3xl'> Edad Animales </h1>
         </button>
       
         <button className='contenedor_Grafica1' onClick={handleRazasClick}>
