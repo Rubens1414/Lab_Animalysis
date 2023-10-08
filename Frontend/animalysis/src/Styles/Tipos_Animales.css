@@ -1,0 +1,97 @@
+.Fondo2{
+    @apply bg-gradient-to-l from-fuchsia-400 via-cyan-700 to-teal-500;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    max-height: calc(100vh - 20px);
+    overflow-y: auto;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a una nueva fila */
+}
+.titulo2{
+
+    @apply text-4xl font-bold text-center text-slate-900 mb-4;
+
+    
+}
+.select{
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+}
+.title3{
+    @apply text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2;
+}
+.textField{
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+}
+
+.contenedor_botones{
+    @apply flex flex-col items-center justify-center gap-10 mt-72 mr-36; 
+}
+.contenedor_grafica {
+    @apply bg-white rounded-xl shadow-xl p-5;
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    text-align: center; /* Centrar el contenido dentro del contenedor */
+    max-width: 90%; /* Ajusta el ancho máximo según tus preferencias */
+    box-sizing: border-box; /* Evita que el padding afecte el ancho máximo */
+    margin-top: 10px; /* Ajusta el margen superior según tus preferencias */
+  }
+/* Estilos para pantallas grandes (más de 768px de ancho) */
+@media (min-width: 768px) {
+    .contenedor_titulo {
+      font-size: 24px;
+      padding: 20px;
+    }
+  
+    .contenedor_botones {
+      margin-top: 48px;
+      margin-right: 20px;
+    }
+  
+    .contenedor_grafica {
+      margin-top: 20px;
+      padding: 20px;
+    }
+  }
+  
+  /* Estilos para pantallas medianas (entre 481px y 767px de ancho) */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .contenedor_titulo {
+      font-size: 20px;
+      padding: 16px;
+    }
+  
+    .contenedor_botones {
+      margin-top: 32px;
+      margin-right: 10px;
+    }
+  
+    .contenedor_grafica {
+      margin-top: 10px;
+      padding: 10px;
+    }
+  }
+  
+  /* Estilos para pantallas pequeñas (hasta 480px de ancho) */
+  @media (max-width: 480px) {
+    .contenedor_titulo {
+      font-size: 18px;
+      padding: 12px;
+    }
+  
+    .contenedor_botones {
+      margin-top: 16px;
+      margin-right: 5px;
+    }
+  
+    .contenedor_grafica {
+      margin-top: 5px;
+      padding: 5px;
+    }
+  }
