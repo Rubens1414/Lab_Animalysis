@@ -3,6 +3,16 @@ import axios from 'axios';
 import 'chart.js';
 import { Bar, Pie } from 'react-chartjs-2';
 import Chart from 'chart.js/auto';
+import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChartPie } from '@fortawesome/free-solid-svg-icons';
+import { faChartColumn } from '@fortawesome/free-solid-svg-icons';
+import { faRotateLeft } from '@fortawesome/free-solid-svg-icons';
+import { faCat } from '@fortawesome/free-solid-svg-icons';
+import { faDog } from '@fortawesome/free-solid-svg-icons';
+import { faCrow } from '@fortawesome/free-solid-svg-icons';
+import { faCow } from '@fortawesome/free-solid-svg-icons';
+
 import '../../Styles/Tipos_Animales.css';
 
 function Tipos_Animales() {
@@ -62,18 +72,35 @@ function Tipos_Animales() {
     fetchData();
   }, [selectedYear, chartType]);
 
-  const toggleChartType = () => {
-    setChartType(chartType === 'bar' ? 'pie' : 'bar');
+  const toggleChartbar = () => {
+    setChartType('bar');
   };
+
+  const toggleChartpie = () => {
+      setChartType('pie');
+    };
 
 
   return (
     <div className='Fondo2'>
+     <motion.div whileHover={{ scale: [null, 1.2] }} transition={{ duration: 0.2 }} className='boton_atras1'style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
+            <button  >
+                  
+            <a href='/Graficas' className='text-2xl' ><FontAwesomeIcon icon={faRotateLeft} style={{color: "#ff0f0f",}} /></a>
+                </button>
+        </motion.div>
+      
+     <div className='contenedor_principal'>
+
+    
       <div className='contenedor_botones'>
-
-       <button className='title3'onClick={toggleChartType}>Cambiar Tipo de Gráfico</button>
-
-        <select
+      <h1 className='  text-2xl p-2' >
+      <FontAwesomeIcon className='text-4xl  text-amber-900' icon={faCat}/>
+            <FontAwesomeIcon className='text-4xl text-amber-900' icon={faDog}  />
+            <FontAwesomeIcon  className='text-4xl text-amber-900' icon={faCrow} />
+            <FontAwesomeIcon   className='text-4xl text-amber-900 ' icon={faCow}  /></h1>
+      <h1 className=' rounded-lg shadow-lg border-2 border-blue-200 shadow-blue-500/50  bg-white text-2xl p-2' >Seleccione el año:</h1>
+      <select
           id='year' className='select'
           onChange={(e) => setSelectedYear(e.target.value)}
           value={selectedYear}
@@ -88,6 +115,16 @@ function Tipos_Animales() {
           <option value='2020'>2020</option>
           <option value='2021'>2021</option>
         </select>
+        <h1 className=' rounded-lg shadow-lg border-2 border-purple-200 shadow-purple-500/50  bg-white p-2 text-2xl' >Tipo de grafico:</h1>
+        <motion.div whileHover={{ scale: [null, 1.2] }} transition={{ duration: 0.2 }}className='title3' >
+           <button onClick={toggleChartpie}><FontAwesomeIcon className='text-6xl' icon={faChartPie} style={{color: "#dd3cc7",}} shake /></button>
+        </motion.div>
+        <motion.div whileHover={{ scale: [null, 1.2] }} transition={{ duration: 0.2 }}className='title3' >
+        <button onClick={toggleChartbar}><FontAwesomeIcon  className='text-6xl' icon={faChartColumn} style={{color: "#135ddd",}}shake /></button>
+        </motion.div>
+       
+
+
       </div>
 
       {loading ? (
@@ -153,8 +190,9 @@ function Tipos_Animales() {
         </div>
       )}
 
-    
-    </div>
+</div>
+      </div>
+   
   );
 }
 

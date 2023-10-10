@@ -1,5 +1,4 @@
-
-
+/* Estilos base */
 .fondo {
     background: conic-gradient(at left top, rgb(255, 228, 230), rgb(204, 251, 241));
     min-height: 100vh;
@@ -9,29 +8,52 @@
     right: 0;
     bottom: 0;
     left: 0;
-   
+}
+.icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+.titulo {
+    @apply my-20 text-9xl font-bold text-center text-gray-900  ;
 }
 
-.titulo{
-
-    @apply my-20 text-9xl font-bold text-center text-green-700;
-
-    
+.boton_position {
+    @apply flex justify-center items-center mx-2 p-12 -mt-10 mb-10;
 }
-.boton_position{
-    @apply flex justify-center  items-center mx-2 p-12 -mt-10 mb-10;
-}
-.boton_size_info{
+
+.boton_size_info {
     @apply pt-4 pb-5 px-36;
 }
-.boton_size_graficas{
+
+.boton_size_graficas {
     @apply pt-4 pb-5 px-64;
 }
-.boton_graficas{ 
+
+.boton_graficas,
+.boton_info {
     @apply text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-slate-950
-    dark:focus:ring-teal-700 font-medium rounded-lg  text-center text-5xl ;
+    dark:focus:ring-teal-700 font-medium rounded-lg text-center text-5xl;
 }
-.boton_info{
-    @apply text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-slate-950
-    dark:focus:ring-teal-700 font-medium rounded-lg  text-center text-5xl ;
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .titulo {
+        @apply text-5xl; /* Reduce el tamaño del texto en pantallas pequeñas */
+    }
+
+    .boton_size_info {
+        @apply px-24; /* Reduce el tamaño del botón en pantallas pequeñas */
+    }
+
+    .boton_size_graficas {
+        @apply px-48; /* Reduce el tamaño del botón en pantallas pequeñas */
+    }
+
+    .boton_graficas,
+    .boton_info {
+        @apply text-4xl; /* Reduce el tamaño del botón en pantallas pequeñas */
+    }
 }
