@@ -1,0 +1,57 @@
+/* Estilos base */
+.fondo9 {
+    @apply bg-gradient-to-r from-green-200 via-green-400 to-green-500;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.principal {
+    @apply flex flex-col items-center justify-center h-full mt-20 mx-20; /* Ajusta los márgenes según tus necesidades */
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 1.25rem; /* Ajusta el relleno según tus necesidades */
+}
+
+.tituloc {
+    @apply text-5xl text-center text-black mb-4; /* Reduce el tamaño del título en pantallas más pequeñas */
+}
+
+.parrafo {
+    @apply text-xl text-center text-black mb-4; /* Reduce el tamaño del párrafo en pantallas más pequeñas */
+}
+
+/* Media query para pantallas medianas (hasta 1024px de ancho) */
+@media (max-width: 1024px) {
+    .principal {
+        margin: 10px; /* Ajusta los márgenes en pantallas medianas */
+    }
+
+    .tituloc {
+        @apply text-4xl; /* Reduce el tamaño del título en pantallas medianas */
+    }
+
+    .parrafo {
+        @apply text-lg; /* Reduce el tamaño del párrafo en pantallas medianas */
+    }
+}
+
+/* Media query para pantallas pequeñas (hasta 768px de ancho) */
+@media (max-width: 768px) {
+    .principal {
+        margin: 5px; /* Ajusta los márgenes en pantallas pequeñas */
+    }
+
+    .tituloc {
+        @apply text-3xl; /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    .parrafo {
+        @apply text-base; /* Reduce el tamaño del párrafo en pantallas pequeñas */
+    }
+}

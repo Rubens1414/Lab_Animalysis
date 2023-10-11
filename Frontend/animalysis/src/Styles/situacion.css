@@ -1,6 +1,6 @@
 /* Estilos base */
-.Fondo5 {
-    @apply bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500;
+.Fondo6 {
+    @apply bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-yellow-600 via-rose-900 to-orange-700;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -10,25 +10,25 @@
     left: 0;
   }
   
-  .titulo5 {
+  .titulo6 {
     @apply text-4xl font-bold text-center text-slate-900 mb-4;
   }
   
-  .select4 {
+  .select5 {
     @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5  dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500;
   }
   
-  .title5 {
+  .title6 {
     @apply rounded-full
   
     shadow-lg border-2 border-blue-200 shadow-blue-500/50 p-10 bg-white mx-10 mb-8;
   }
   
-  .textField3 {
+  .textField4 {
     @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
   }
   
-  .contenedor_principal3 {
+  .contenedor_principal4 {
     @apply flex flex-row; /* Cambia la dirección de flexión a horizontal */
     justify-content: flex-start; /* Alinea los elementos a la izquierda */
     align-items: flex-start; /* Alinea los elementos en la parte superior */
@@ -36,11 +36,11 @@
     margin: 20px; /* Agrega margen exterior para separar de los bordes */
   }
   
-  .contenedor_botones3 {
+  .contenedor_botones4 {
     @apply flex flex-col items-center justify-center gap-10 mt-72 mr-36;
   }
   
-  .contenedor_grafica3 {
+  .contenedor_grafica4 {
     @apply bg-white rounded-xl shadow-xl p-5;
     margin: 0 auto;
     display: flex;
@@ -55,14 +55,14 @@
   
   /* Estilos para pantallas grandes (más de 768px de ancho) */
   @media (min-width: 768px) {
-    .contenedor_principal3 {
+    .contenedor_principal4 {
       gap: 20px; /* Espacio entre los contenedores en pantallas grandes */
   }
-    .contenedor_titulo3 {
+    .contenedor_titulo4 {
         font-size: 24px;
         padding: 20px;
     }
-    .boton_atras4{
+    .boton_atras5{
       @apply bg-white rounded-full shadow-lg  ;
       width: 60px;
       height: 60px;
@@ -70,13 +70,13 @@
       margin-top: 20px;
       margin-bottom: -110px;
   }
-    .contenedor_botones3 {
+    .contenedor_botones4 {
         margin-top: 100px; /* Alinea los botones con la parte superior en pantallas grandes */
         margin-right: 20px;
         flex: 1; /* Hace que el contenedor de botones ocupe todo el ancho disponible */
     }
   
-    .contenedor_grafica3 {
+    .contenedor_grafica4 {
         margin-top: 150px;
         margin-right: 300px;
         padding: 20px;
@@ -86,21 +86,21 @@
   
   /* Media query para pantallas medianas (entre 481px y 767px de ancho) */
   @media (min-width: 481px) and (max-width: 767px) {
-    .contenedor_principal3 {
+    .contenedor_principal4 {
       flex-direction: column; /* Cambia la dirección de flexión a vertical en pantallas medianas */
       gap: 10px; /* Espacio entre los contenedores en pantallas medianas */
   }
-    .contenedor_titulo3 {
+    .contenedor_titulo4 {
         font-size: 20px;
         padding: 16px;
     }
   
-    .contenedor_botones3 {
+    .contenedor_botones4 {
         margin-top: 0; /* Alinea los botones con la parte superior en pantallas medianas */
         margin-right: 10px;
         flex: 1; /* Hace que el contenedor de botones ocupe todo el ancho disponible */
     }
-    .boton_atras4{
+    .boton_atras5{
       @apply bg-white rounded-full shadow-lg  ;
       width: 60px;
       height: 60px;
@@ -108,7 +108,7 @@
       margin-top: 20px;
       margin-bottom: -20px;
     }
-    .contenedor_grafica2 {
+    .contenedor_grafica3 {
         margin-top: 10px;
         padding: 10px;
         flex: 1; /* Hace que el contenedor de gráficos ocupe todo el ancho disponible */
@@ -117,23 +117,23 @@
   
   /* Media query para pantallas pequeñas (hasta 480px de ancho) */
   @media (max-width: 480px) {
-    .contenedor_principal3 {
+    .contenedor_principal4 {
       flex-direction: column; /* Cambia la dirección de flexión a vertical en pantallas pequeñas */
       gap: 5px; /* Espacio entre los contenedores en pantallas pequeñas */
   }
   
-    .contenedor_titulo3 {
+    .contenedor_titulo4 {
         font-size: 18px;
         padding: 12px;
     }
   
-    .contenedor_botones3 {
+    .contenedor_botones4 {
         margin-top: 0; /* Alinea los botones con la parte superior en pantallas pequeñas */
         margin-right: 5px;
         flex: 1; /* Hace que el contenedor de botones ocupe todo el ancho disponible */
     }
   
-    .contenedor_grafica3 {
+    .contenedor_grafica4 {
         margin-top: 5px;
         padding: 5px;
         flex: 1; /* Hace que el contenedor de gráficos ocupe todo el ancho disponible */
@@ -141,19 +141,19 @@
   }
   /* Media query para pantallas hasta 1360px de ancho */
   @media (max-width: 1360px) {
-    .contenedor_principal3 {
+    .contenedor_principal4 {
       gap: 20px; /* Espacio entre los contenedores en pantallas grandes */
   }
    
   
-    .contenedor_grafica3 {
+    .contenedor_grafica4 {
       margin-top: 200px;
       margin-right: 10px;
       padding: 20px;
       flex: 1; /* Hace que el contenedor de gráficos ocupe todo el ancho disponible */
     }
   
-    .contenedor_titulo3 {
+    .contenedor_titulo4 {
         font-size: 20px; /* Ajusta el tamaño del título en pantallas hasta 1360px */
         padding: 16px; /* Ajusta el espacio alrededor del título en pantallas hasta 1360px */
     }

@@ -30,7 +30,7 @@ function Principal() {
       return <Navigate to="/Graficas" replace />;
     }
     if (Info) {
-        return <Navigate to="/Info" replace />;
+        return <Navigate to="/creditos" replace />;
       }
   
     return (

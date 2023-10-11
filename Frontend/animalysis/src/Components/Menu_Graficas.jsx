@@ -54,7 +54,14 @@ function Menu_Graficas() {
     const handleColoresClick = () => {
         setColores(true);
         }
-
+    function getRandomColors(count) {
+    const colors = [];
+    for (let i = 0; i < count; i++) {
+        const color = `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 0.6)`;
+        colors.push(color);
+    }
+    return colors;
+    }
     if (Tipos_Animales) {
         return <Navigate to="/Graficas/Tipos_Animales" replace />;
       }
@@ -87,7 +94,7 @@ function Menu_Graficas() {
         </motion.div>
       
         <div className='titulo1'>
-            <h1 style={{ fontFamily: 'Bowling' }} ><FontAwesomeIcon icon={faChartPie} spinPulse style={{color: "#ffffff",}} /> Graficas</h1>
+            <h1 style={{ fontFamily: 'Bowling' ,}} ><FontAwesomeIcon icon={faChartPie} spinPulse style={{color: getRandomColors(800),}} /> Graficas</h1>
         </div>
        
         <div className='botones-container '>

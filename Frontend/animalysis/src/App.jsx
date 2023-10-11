@@ -8,6 +8,7 @@ import Edad from './Components/Graficas/Edad';
 import Raza from './Components/Graficas/Raza';
 import Situacion from './Components/Graficas/Situacion';
 import Color from './Components/Graficas/Colores';
+import Creditos from './Components/creditos';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Route path="/Graficas/Razas" element={<Raza />} exact ></Route>
       <Route path="/Graficas/Ingreso" element={<Situacion />} exact ></Route>
       <Route path="/Graficas/Colores" element={<Color />} exact ></Route>
+      <Route path="/creditos" element={<Creditos/>} exact ></Route>
     
      </Routes>
     </BrowserRouter>

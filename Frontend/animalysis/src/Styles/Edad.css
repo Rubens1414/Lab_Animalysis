@@ -1,0 +1,161 @@
+/* Estilos base */
+.Fondo4 {
+    @apply bg-gradient-to-tl from-lime-100 via-teal-400 to-cyan-400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .titulo4 {
+    @apply text-4xl font-bold text-center text-slate-900 mb-4;
+  }
+  
+  .select3 {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5  dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500;
+  }
+  
+  .title4 {
+    @apply rounded-full
+  
+    shadow-lg border-2 border-blue-200 shadow-blue-500/50 p-10 bg-white mx-10 mb-8;
+  }
+  
+  .textField2 {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+  }
+  
+  .contenedor_principal2 {
+    @apply flex flex-row; /* Cambia la dirección de flexión a horizontal */
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    gap: 20px; /* Espacio entre los contenedores */
+    margin: 20px; /* Agrega margen exterior para separar de los bordes */
+  }
+  
+  .contenedor_botones2 {
+    @apply flex flex-col items-center justify-center gap-10 mt-72 mr-36;
+  }
+  
+  .contenedor_grafica2 {
+    @apply bg-white rounded-xl shadow-xl p-5;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 90%;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  
+  /* Estilos para pantallas grandes (más de 768px de ancho) */
+  @media (min-width: 768px) {
+    .contenedor_principal2 {
+      gap: 20px; /* Espacio entre los contenedores en pantallas grandes */
+  }
+    .contenedor_titulo2 {
+        font-size: 24px;
+        padding: 20px;
+    }
+    .boton_atras3{
+      @apply bg-white rounded-full shadow-lg  ;
+      width: 60px;
+      height: 60px;
+      margin-left: 30px;
+      margin-top: 20px;
+      margin-bottom: -110px;
+  }
+    .contenedor_botones2 {
+        margin-top: 100px; /* Alinea los botones con la parte superior en pantallas grandes */
+        margin-right: 20px;
+        flex: 1; /* Hace que el contenedor de botones ocupe todo el ancho disponible */
+    }
+  
+    .contenedor_grafica2 {
+        margin-top: 150px;
+        margin-right: 300px;
+        padding: 20px;
+        flex: 1; /* Hace que el contenedor de gráficos ocupe todo el ancho disponible */
+    }
+  }
+  
+  /* Media query para pantallas medianas (entre 481px y 767px de ancho) */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .contenedor_principal2 {
+      flex-direction: column; /* Cambia la dirección de flexión a vertical en pantallas medianas */
+      gap: 10px; /* Espacio entre los contenedores en pantallas medianas */
+  }
+    .contenedor_titulo2 {
+        font-size: 20px;
+        padding: 16px;
+    }
+  
+    .contenedor_botones2 {
+        margin-top: 0; /* Alinea los botones con la parte superior en pantallas medianas */
+        margin-right: 10px;
+        flex: 1; /* Hace que el contenedor de botones ocupe todo el ancho disponible */
+    }
+    .boton_atras3{
+      @apply bg-white rounded-full shadow-lg  ;
+      width: 60px;
+      height: 60px;
+      margin-left: 30px;
+      margin-top: 20px;
+      margin-bottom: -20px;
+    }
+    .contenedor_grafica1 {
+        margin-top: 10px;
+        padding: 10px;
+        flex: 1; /* Hace que el contenedor de gráficos ocupe todo el ancho disponible */
+    }
+  }
+  
+  /* Media query para pantallas pequeñas (hasta 480px de ancho) */
+  @media (max-width: 480px) {
+    .contenedor_principal2 {
+      flex-direction: column; /* Cambia la dirección de flexión a vertical en pantallas pequeñas */
+      gap: 5px; /* Espacio entre los contenedores en pantallas pequeñas */
+  }
+  
+    .contenedor_titulo2 {
+        font-size: 18px;
+        padding: 12px;
+    }
+  
+    .contenedor_botones2 {
+        margin-top: 0; /* Alinea los botones con la parte superior en pantallas pequeñas */
+        margin-right: 5px;
+        flex: 1; /* Hace que el contenedor de botones ocupe todo el ancho disponible */
+    }
+  
+    .contenedor_grafica2 {
+        margin-top: 5px;
+        padding: 5px;
+        flex: 1; /* Hace que el contenedor de gráficos ocupe todo el ancho disponible */
+    }
+  }
+  /* Media query para pantallas hasta 1360px de ancho */
+  @media (max-width: 1360px) {
+    .contenedor_principal2 {
+      gap: 20px; /* Espacio entre los contenedores en pantallas grandes */
+  }
+   
+  
+    .contenedor_grafica2 {
+      margin-top: 200px;
+      margin-right: 10px;
+      padding: 20px;
+      flex: 1; /* Hace que el contenedor de gráficos ocupe todo el ancho disponible */
+    }
+  
+    .contenedor_titulo2 {
+        font-size: 20px; /* Ajusta el tamaño del título en pantallas hasta 1360px */
+        padding: 16px; /* Ajusta el espacio alrededor del título en pantallas hasta 1360px */
+    }
+  }
+  

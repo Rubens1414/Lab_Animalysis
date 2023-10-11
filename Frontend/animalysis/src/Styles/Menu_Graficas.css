@@ -1,6 +1,6 @@
 /* Estilos base */
 .Fondo1 {
-    @apply bg-gradient-to-tl from-amber-300 via-violet-500 to-teal-400;
+    background: conic-gradient(at left top, rgb(255, 228, 230), rgb(204, 251, 241));
     min-height: 100vh;
     display: flex;
     flex-direction: column;

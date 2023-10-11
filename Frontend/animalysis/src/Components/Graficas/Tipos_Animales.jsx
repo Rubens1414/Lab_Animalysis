@@ -79,17 +79,34 @@ function Tipos_Animales() {
   const toggleChartpie = () => {
       setChartType('pie');
     };
-
+  
+    function getRandomColors(count) {
+      const colors = [];
+      for (let i = 0; i < count; i++) {
+        const color = `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 0.6)`;
+        colors.push(color);
+      }
+      return colors;
+    }
+  
 
   return (
     <div className='Fondo2'>
-     <motion.div whileHover={{ scale: [null, 1.2] }} transition={{ duration: 0.2 }} className='boton_atras1'style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
-            <button  >
-                  
-            <a href='/Graficas' className='text-2xl' ><FontAwesomeIcon icon={faRotateLeft} style={{color: "#ff0f0f",}} /></a>
-                </button>
-        </motion.div>
-      
+
+<motion.div
+  whileHover={{ scale: 1.2 }}
+  transition={{ duration: 0.2 }}
+  className='boton_atras1'
+  style={{ display: 'flex', alignItems: 'center' }}
+>
+  <button style={{ pointerEvents: 'auto', zIndex: 1 }}>
+    <a href='/Graficas' className='text-2xl ml-4' >
+      <FontAwesomeIcon icon={faRotateLeft} style={{ color: "#ff0f0f" }} />
+    </a>
+  </button>
+</motion.div>
+
+
      <div className='contenedor_principal'>
 
     
@@ -155,12 +172,8 @@ function Tipos_Animales() {
             <Bar
               data={{
                 labels: data.map((item) => item.Animal_Type),
-                datasets: [{ label: 'Cantidad', data: data.map((item) => item.count), backgroundColor: [
-                'rgba(255, 99, 132, 0.6)',   // Color de la primera barra
-                'rgba(54, 162, 235, 0.6)',  // Color de la segunda barra
-                'rgba(255, 206, 86, 0.6)',  // Color de la tercera barra
-                // Agrega más colores aquí según sea necesario
-            ] }],
+                datasets: [{ label: 'Cantidad', data: data.map((item) => item.count), 
+                backgroundColor: getRandomColors(data.length)}],
               }}
               options={{
                 scales: {
@@ -178,6 +191,7 @@ function Tipos_Animales() {
               data={{
                 labels: data.map((item) => item.Animal_Type),
                 datasets: [{ label: 'Cantidad', data: data.map((item) => item.count) }],
+                backgroundColor: getRandomColors(data.length)
               }}
               width={400}
               height={200}
