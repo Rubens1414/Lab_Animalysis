@@ -14,9 +14,9 @@ import { faPaw } from '@fortawesome/free-solid-svg-icons';
 function Raza() {
   const [data, setData] = useState([]);
   const [selectedAnimalType, setSelectedAnimalType] = useState('');
-  const [selectedChartType, setSelectedChartType] = useState('bar'); // Valor predeterminado: gráfico de 
-  const [zoomLevel, setZoomLevel] = useState(8000); // Estado para el nivel de zoom
-  const [minimo, setMinimo] = useState(100); // Estado para el nivel de zoom
+  const [selectedChartType, setSelectedChartType] = useState('bar'); 
+  const [zoomLevel, setZoomLevel] = useState(8000); 
+  const [minimo, setMinimo] = useState(100); 
 
   useEffect(() => {
     
@@ -27,11 +27,10 @@ function Raza() {
 
 
   const topBreeds = data
-    .sort((a, b) => b.count - a.count) // Ordenar por recuento descendente
-    .slice(0, minimo); // Obtener las primeras n razas más comunes 
+    .sort((a, b) => b.count - a.count) 
+    .slice(0, minimo); 
 
 
-  // Función para obtener colores aleatorios 
   function getRandomColors(count) {
     const colors = [];
     for (let i = 0; i < count; i++) {
@@ -41,7 +40,6 @@ function Raza() {
     return colors;
   }
 
-  // Función para manejar el cambio en el tipo de animal seleccionado
   const handleAnimalTypeChange = (event) => {
     setSelectedAnimalType(event.target.value);
   };
@@ -92,7 +90,6 @@ function Raza() {
           <option value='Livestock'>Ganaderos</option>
           <option value='Bird'>Pajaros</option>
           <option value='Other'>Otro</option>
-          {/* Agrega más opciones según tus datos */}
         </select>
         <label  className='rounded-lg  bg-white p-2 text-2xl' htmlFor="chartType">Selecciona un Tipo de Gráfico:</label>
           <motion.div whileHover={{ scale: [null, 1.2] }} transition={{ duration: 0.2 }}className='title4' >
@@ -128,18 +125,18 @@ function Raza() {
            </div>
           {selectedChartType === 'bar' ? (
               <Bar data={
-                { labels: topBreeds.map((item) => item.Breed), // Etiquetas para las razas más comunes
+                { labels: topBreeds.map((item) => item.Breed), 
               datasets: [
                 {
-                  data: topBreeds.map((item) => item.count), // Datos de recuento para las razas más comunes
-                  backgroundColor: getRandomColors(topBreeds.length), // Colores aleatorios para cada segmento
+                  data: topBreeds.map((item) => item.count), 
+                  backgroundColor: getRandomColors(topBreeds.length),
                 },
               ],}} 
               options={{
                 scales: {
                   y: {
                     beginAtZero: true,
-                    max: zoomLevel, // Ajusta la escala Y en función del zoom
+                    max: zoomLevel,
                   },
                 },
               }}

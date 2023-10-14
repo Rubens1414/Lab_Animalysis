@@ -15,11 +15,11 @@ function Colores() {
   const [data, setData] = useState([]);
   const [selectedAnimalType, setSelectedAnimalType] = useState('');
   const [selectedChartType, setSelectedChartType] = useState('bar');
-  const [minimo, setMinimo] = useState(100); // Estado para el nivel de zoom
-  const [zoomLevel, setZoomLevel] = useState(8000); // Estado para el nivel de zoom
+  const [minimo, setMinimo] = useState(100);
+  const [zoomLevel, setZoomLevel] = useState(8000); 
 
   useEffect(() => {
-    // Hacer una solicitud Axios para obtener los datos necesarios desde tu servidor
+   
     axios.get(`/api/animals/Animal_type_with_Color?Animal_Type=${selectedAnimalType}`).then((response) => {
  
       setData(response.data);
@@ -27,7 +27,7 @@ function Colores() {
   }, [selectedAnimalType]);
 
   const topcolor = data
-    .sort((a, b) => b.count - a.count) // Ordenar por recuento descendente
+    .sort((a, b) => b.count - a.count)
     .slice(0, minimo); // 
   const updateZoom = (newZoomLevel) => {
     setZoomLevel(newZoomLevel);

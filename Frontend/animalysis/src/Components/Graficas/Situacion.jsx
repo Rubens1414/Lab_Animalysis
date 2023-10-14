@@ -14,16 +14,15 @@ function Situacion() {
   const [data, setData] = useState([]);
   const [selectedAnimalType, setSelectedAnimalType] = useState('');
   const [selectedChartType, setSelectedChartType] = useState('bar');
-  const [zoomLevel, setZoomLevel] = useState(8000); // Estado para el nivel de zoom
-
+  const [zoomLevel, setZoomLevel] = useState(8000);
   useEffect(() => {
-    // Hacer una solicitud Axios para obtener los datos necesarios desde tu servidor
+  
     axios.get(`/api/animals/Animal_type_with_Intake_Type?Animal_Type=${selectedAnimalType}`).then((response) => {
       setData(response.data);
     });
   }, [selectedAnimalType ]);
 
-  // Función para manejar el cambio en el tipo de gráfica seleccionado
+
   const handleChartTypeChange = (event) => {
     setSelectedChartType(event.target.value);
   };
@@ -50,7 +49,7 @@ function Situacion() {
     }
     return colors;
   }
-  // Función para manejar el cambio en el tipo de animal seleccionado
+
   const handleAnimalTypeChange = (event) => {
     setSelectedAnimalType(event.target.value);
   };
@@ -84,7 +83,7 @@ function Situacion() {
           <option value='Livestock'>Ganaderos</option>
           <option value='Bird'>Pajaros</option>
           <option value='Other'>Otro</option>
-          {/* Agrega más opciones según tus datos */}
+   
         </select>
      
         <h1 className=' rounded-lg shadow-lg  bg-white p-2 text-2xl' >Tipo de Grafico:</h1>
@@ -122,7 +121,7 @@ function Situacion() {
           )}
         {selectedChartType === 'bar' ? (
           <Bar data={{ 
-            labels: data.map((item) => item.Intake_Type), // Eje x: Intake_Type
+            labels: data.map((item) => item.Intake_Type), 
           datasets: [
             {
               label: 'Cantidad de animales',
@@ -134,14 +133,14 @@ function Situacion() {
             scales: {
               y: {
                 beginAtZero: true,
-                max: zoomLevel, // Ajusta la escala Y en función del zoom
+                max: zoomLevel, 
               },
             },
           }}
           
           />
         ) : selectedChartType === 'pie' ? (
-          <Pie data={{labels: data.map((item) => item.Intake_Type), // Eje x: Intake_Type
+          <Pie data={{labels: data.map((item) => item.Intake_Type),
           datasets: [
             {
               data: data.map((item) => item.count),
@@ -149,7 +148,7 @@ function Situacion() {
             },
           ],}} />
         ) :  (
-          <Radar data={{ labels: data.map((item) => item.Intake_Type), // Eje x: Intake_Type
+          <Radar data={{ labels: data.map((item) => item.Intake_Type), 
           datasets: [
             {
               label: 'Cantidad de animales',

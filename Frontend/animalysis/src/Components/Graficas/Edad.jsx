@@ -19,18 +19,18 @@ function Edad() {
   const [data, setData] = useState([]);
   const [selectedAnimalType, setSelectedAnimalType] = useState('');
   const [selectedChartType, setSelectedChartType] = useState('bar'); 
-  const [zoomLevel, setZoomLevel] = useState(8000); // Estado para el nivel de zoom
-// cambiar minimo 
-  const [minimo, setMinimo] = useState(600); // Estado para el nivel de zoom
+  const [zoomLevel, setZoomLevel] = useState(8000); 
+
+  const [minimo, setMinimo] = useState(600); 
 
   useEffect(() => {
-    // Hacer una solicitud Axios para obtener los datos necesarios desde tu servidor
+   
     axios.get(`/api/animals/Animal_type_with_Age_upon_Intake?Animal_Type=${selectedAnimalType}`).then((response) => {
       setData(response.data);
     });
   }, [selectedAnimalType]);
 
-  // Función para manejar el cambio en el tipo de gráfico seleccionado
+
   const handleChartTypeChange = (event) => {
     setSelectedChartType(event.target.value);
   };
@@ -62,7 +62,7 @@ function Edad() {
     return colors;
   }
 
-  // Filtrar los datos para limitar la cantidad a 100 o menos
+
   const filteredData = data.filter((item) => item.count >= minimo);
 
   return (
@@ -98,7 +98,7 @@ function Edad() {
             <option value="Bird">Pajaros</option>
             <option value="Livestock">Ganaderia</option>
             <option value="Other">Otros</option>
-            {/* Agrega más opciones según tus datos */}
+          
           </select>
           <label  className='rounded-lg  bg-white p-2 text-2xl' htmlFor="chartType">Selecciona un Tipo de Gráfico:</label>
           <motion.div whileHover={{ scale: [null, 1.2] }} transition={{ duration: 0.2 }}className='title4' >
@@ -141,7 +141,7 @@ function Edad() {
     
           {selectedChartType === 'bar' ? (
             <Bar data={{
-              labels: filteredData.map((item) => item.Age_upon_Intake), // Edad en el eje X
+              labels: filteredData.map((item) => item.Age_upon_Intake),
               datasets: [
                 {
                   label: 'Cantidad de animales',
@@ -154,7 +154,7 @@ function Edad() {
               scales: {
                 y: {
                   beginAtZero: true,
-                  max: zoomLevel, // Ajusta la escala Y en función del zoom
+                  max: zoomLevel, 
                 },
               },
             }}

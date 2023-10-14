@@ -21,7 +21,7 @@ function Tipos_Animales() {
   const [loading, setLoading] = useState(false);
   const [chartType, setChartType] = useState('bar');
   const [chart, setChart] = useState(null);
-  const [zoomLevel, setZoomLevel] = useState(11000); // Estado para el nivel de zoom
+  const [zoomLevel, setZoomLevel] = useState(11000); 
   const chartRef = useRef(null);
 
   const updateZoom = (newZoomLevel) => {
@@ -54,7 +54,7 @@ function Tipos_Animales() {
               scales: {
                 y: {
                   beginAtZero: true,
-                  max: zoomLevel, // Ajusta la escala Y en función del zoom
+                  max: zoomLevel, 
                 },
               },
             },
@@ -179,7 +179,7 @@ function Tipos_Animales() {
                 scales: {
                   y: {
                     beginAtZero: true,
-                    max: zoomLevel, // Ajusta la escala Y en función del zoom
+                    max: zoomLevel, 
                   },
                 },
               }}

@@ -27,8 +27,11 @@ function creditos() {
          
             <img src={require('../Images/Galloz.png')}  />
             <p className='parrafo'>
-            Galloz es una empresa innovadora especializada en la creación de juegos, desarrollo de páginas web y análisis de datos. Este proyecto de la compañía fue realizado por Rubens Andre Apresa Echeverria, Luis Espinel Luna y Fernando Valencia. Galloz se destaca por su enfoque en la diversión y el entretenimiento a través de juegos, así como por su capacidad para diseñar sitios web impactantes y proporcionar análisis de datos perspicaces.
+            Galloz es una empresa innovadora especializada en la creación de juegos, desarrollo de páginas web y análisis de datos. Este proyecto de la compañía fue realizado por Rubens Andre Apresa Echeverria, Luis Espinel Luna y Fernando Valencia, se encarga de ilustrar de manera grafica una base de datos de un refugio de animales llamado Austim Animal Center, denle a la imagen para mas informacion sobre la base de datos: 
             </p>
+            <a href="https://www.kaggle.com/datasets/jackdaoud/animal-shelter-analytics?select=Austin_Animal_Center_Intakes.csv">
+              <img src={require('../Images/Kaggle.png')} />
+            </a>
         </div>
     </div>
   )

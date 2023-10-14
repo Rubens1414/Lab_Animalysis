@@ -16,7 +16,7 @@ function Condicion_Admision() {
   const [selectedAnimalType, setSelectedAnimalType] = useState('');
   const [AnimalType, setAnimalType] = useState('');
   const [loading, setLoading] = useState(false);
-  const [chartType, setChartType] = useState('pie'); // Inicialmente, se establece en 'pie'
+  const [chartType, setChartType] = useState('pie'); 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -97,7 +97,7 @@ function Condicion_Admision() {
           <option value='Livestock'>Ganaderos</option>
           <option value='Bird'>Pajaros</option>
           <option value='Other'>Otro</option>
-          {/* Agrega más opciones de Animal_Type según tus datos */}
+        
         </select>
         <h1 className=' rounded-lg shadow-lg  bg-white p-2 text-2xl' >Tipo de Grafico:</h1>
         <motion.div whileHover={{ scale: [null, 1.2] }} transition={{ duration: 0.2 }}className='rounded-full
