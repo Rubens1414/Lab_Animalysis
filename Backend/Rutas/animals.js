@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
 
-// Importa el modelo de Animal si ya lo tienes definido
 const Animal = require('../models/Animal'); 
 
 
@@ -20,7 +18,7 @@ const Animal = require('../models/Animal');
         if (animal.DateTime) {
           const dateTimeParts = animal.DateTime.split('/');
           if (dateTimeParts.length === 3) {
-            const year = parseInt(`20${dateTimeParts[2]}`, 10); // Supongo que 'AA' significa los dos últimos dígitos del año
+            const year = parseInt(`20${dateTimeParts[2]}`, 10); // se supone que 'AA' significa los dos últimos dígitos del año
             const animalType = animal.Animal_Type;
   
             // Crear una clave única para cada combinación de año y tipo de animal

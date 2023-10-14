@@ -17,7 +17,7 @@ const animalsRoutes = require('./Rutas/animals'); // Asegúrate de que la ruta s
 app.use('/api/animals', animalsRoutes); // Monta las rutas de Animals en "/api/animals"
 
 // Ruta al archivo CSV
-const csvFilePath = './csv/Austin_Animal_Center_Intakes_clean.csv'; // Reemplaza con la ruta adecuada a tu archivo CSV
+const csvFilePath = './csv/Austin_Animal_Center_Intakes_clean.csv'; 
 
 Animals.findOne({}).exec()
   .then((result) => {
@@ -66,7 +66,7 @@ app.get('/', function (req, res) {
   res.send('Server online');
 });
 
-// Configura el servidor para escuchar en el puerto 5000
+
 app.listen(5000, function () {
   console.log('Server online en el puerto 5000');
 });

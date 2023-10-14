@@ -107,7 +107,7 @@ function Colores() {
 
       {selectedChartType === 'bar' ? (
             <div>
-              <label htmlFor='zoomLevel' className='titulo3'> Limite : </label>
+              <label htmlFor='zoomLevel' className='titulo3'>  Limite : </label>
               <input className='titulo3 textField2'
                 type='number'
                 id='zoomLevel'
@@ -121,7 +121,7 @@ function Colores() {
             <h3 className='titulo3'>Gráfico Radar</h3>
           )}
             <div>
-            <label htmlFor='filter' className='titulo3'> Minimo : </label>
+            <label htmlFor='zoomLevel' className='titulo3'>  Top : </label>
             <input className='titulo5 textField3'
                 type='number'
                 id='minimum'
@@ -144,7 +144,7 @@ function Colores() {
                 scales: {
                   y: {
                     beginAtZero: true,
-                    max: zoomLevel, // Ajusta la escala Y en función del zoom
+                    max: zoomLevel, 
                   },
                 },
               }}

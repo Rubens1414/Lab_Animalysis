@@ -115,6 +115,7 @@ function Raza() {
           <h3 className='titulo3'>Gráfico de Torta</h3>
         ) }
         <div>
+        <label htmlFor='zoomLevel' className='titulo3'>  Top : </label>
           <input className='titulo4 textField3'
                 type='number'
                 id='minimum'
