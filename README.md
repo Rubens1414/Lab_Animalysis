@@ -42,7 +42,7 @@ Sigue estos pasos para comenzar a ver el proyecto:
 ## 1. Inicia el servidor (Asegurese de tener el servicio Mongodb activo)
 ### Vete a la carpeta Backend:
     cd Backend
-### Inicia el servidor:
+### Inicia el servidor (Asegurese de tener nodemon instalado):
     nodemon server.js 
      
 
