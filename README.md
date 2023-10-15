@@ -7,7 +7,7 @@
 
 
 ## Descripción
-Animalysis es una aplicación web diseñada para analizar mediante graficas los distintos datos de animales en refugios . Esta aplicación está desarrollada utilizando tecnologías como Node.js, JavaScript, React y MongoDB.
+Animalysis es una aplicación web diseñada por: Rubens Andre Apresa Echeverria, Luis Espinel Luna y Fernando Valencia, para analizar mediante graficas los distintos datos de animales en refugios. Esta aplicación está desarrollada utilizando tecnologías como Node.js, JavaScript, React y MongoDB.
 
 Estos datos fueron tomados por: https://www.kaggle.com/datasets/jackdaoud/animal-shelter-analytics?select=Austin_Animal_Center_Intakes.csv
 ## Requisitos
